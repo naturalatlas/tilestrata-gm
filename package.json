@@ -1,0 +1,36 @@
+{
+  "name": "tilestrata-gm",
+  "version": "0.1.0",
+  "description": "A TileStrata plugin for manipulating/transcoding tile images with GraphicsMagick.",
+  "author": "Brian Reavis <brian@thirdroute.com>",
+  "license": "Apache License, v2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R tap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naturalatlas/tilestrata-gm.git"
+  },
+  "keywords": [
+    "tilestrata",
+    "tilestrata-plugin",
+    "tilestrata-transform",
+    "graphicsmagick",
+    "gm"
+  ],
+  "bugs": {
+    "url": "https://github.com/naturalatlas/tilestrata-gm/issues"
+  },
+  "homepage": "https://github.com/naturalatlas/tilestrata-gm",
+  "dependencies": {
+    "gm": "^1.17.0"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1"
+  },
+  "peerDependencies": {
+    "tilestrata": "*"
+  }
+}
