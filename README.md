@@ -14,15 +14,11 @@ $ npm install tilestrata-gm --save
 ```js
 var gm = require('tilestrata-gm');
 
-server.registerLayer(function(layer) {
-    layer.setName('mylayer');
-    layer.registerRoute('tile-contrast.png', function(handler) {
-        layer.registerProvider(...);
-        layer.registerTransform(gm(function(image) {
-            return image.resize(256).contrast(5);
-        }));
-    });
-});
+server.layer('mylayer').route('tile-contrast.png')
+    .use(yourprovider)
+    .use(gm(function(image) {
+        return image.resize(256).contrast(5);
+    }));
 ```
 
 ## Contributing
