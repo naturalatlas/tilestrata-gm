@@ -2,6 +2,7 @@ var gm = require('gm');
 
 module.exports = function(fn) {
 	return {
+		name: 'gm',
 		transform: function(server, req, buffer, headers, callback) {
 			var image;
 

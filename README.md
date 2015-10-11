@@ -1,6 +1,6 @@
 # tilestrata-gm
 [![NPM version](http://img.shields.io/npm/v/tilestrata-gm.svg?style=flat)](https://www.npmjs.org/package/tilestrata-gm)
-[![Build Status](http://img.shields.io/travis/naturalatlas/tilestrata-gm/master.svg?style=flat)](https://travis-ci.org/naturalatlas/tilestrata-gm)
+[![Build Status](https://travis-ci.org/naturalatlas/tilestrata-gm.svg)](https://travis-ci.org/naturalatlas/tilestrata-gm)
 [![Coverage Status](http://img.shields.io/coveralls/naturalatlas/tilestrata-gm/master.svg?style=flat)](https://coveralls.io/r/naturalatlas/tilestrata-gm)
 
 A [TileStrata](https://github.com/naturalatlas/tilestrata) plugin for manipulating and transcoding tile images with [GraphicsMagick](http://www.graphicsmagick.org/) via [gm](http://aheckmann.github.io/gm/docs.html).
@@ -14,11 +14,12 @@ $ npm install tilestrata-gm --save
 ```js
 var gm = require('tilestrata-gm');
 
-server.layer('mylayer').route('tile-contrast.png')
-    .use(yourprovider)
-    .use(gm(function(image) {
-        return image.resize(256).contrast(5);
-    }));
+server.layer('mylayer')
+	.route('tile-contrast.png')
+		.use(/* some provider */)
+		.use(gm(function(image) {
+			return image.resize(256).contrast(5);
+		}));
 ```
 
 ## Contributing
