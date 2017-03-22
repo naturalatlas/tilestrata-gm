@@ -20,6 +20,9 @@ server.layer('mylayer')
 		.use(gm(function(image) {
 			return image.resize(256).contrast(5);
 		}));
+
+// to set the max concurrency (defaults to the number of processors)
+gm.setMaxConcurrency(2);
 ```
 
 ## Contributing
@@ -32,7 +35,7 @@ $ npm test
 
 ## License
 
-Copyright &copy; 2015 [Natural Atlas, Inc.](https://github.com/naturalatlas) & [Contributors](https://github.com/naturalatlas/tilestrata-gm/graphs/contributors)
+Copyright &copy; 2015–2017 [Natural Atlas, Inc.](https://github.com/naturalatlas) & [Contributors](https://github.com/naturalatlas/tilestrata-gm/graphs/contributors)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at: http://www.apache.org/licenses/LICENSE-2.0
 

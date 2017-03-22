@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "A TileStrata plugin for manipulating/transcoding tile images with GraphicsMagick.",
   "author": "Brian Reavis <brian@thirdroute.com>",
-  "license": "Apache License, v2.0",
+  "license": "Apache-2.0",
   "main": "index.js",
   "scripts": {
     "test": "mocha -R tap"
@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/naturalatlas/tilestrata-gm",
   "dependencies": {
-    "gm": "^1.20.0"
+    "async": "^2.1.5",
+    "gm": "^1.23.0"
   },
   "devDependencies": {
     "chai": "^3.3.0",
